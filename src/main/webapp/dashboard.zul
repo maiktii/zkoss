@@ -9,6 +9,7 @@
                 <button label="Registration" width="100%" onClick='Executions.sendRedirect("registration.zul")'/>
                 <button label="List" width="100%" onClick='Executions.sendRedirect("list.zul")'/>
                 <button label="Update" width="100%" onClick='Executions.sendRedirect("update.zul")'/>
+                <button label="Logout" width="100%" onClick='Executions.sendRedirect("login.zul")'/>
             </vlayout>
         </west>
 

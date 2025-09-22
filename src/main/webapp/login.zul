@@ -2,25 +2,33 @@
 <zk xmlns="http://www.zkoss.org/2005/zul">
 
     <window title="Login" border="normal" width="350px" closable="false"
-            minimizable="false" maximizable="false" sclass="login-window">
+            minimizable="false" maximizable="false" position="center">
 
-        <vlayout spacing="15px" style="padding:20px">
+        <vlayout spacing="15px" hflex="1">
 
-            <label value="🔑 Please Login" style="font-size:16px; font-weight:bold; text-align:center"/>
+            <!-- Title -->
+            <label value="🔑 Please Login" style="font-weight:bold;text-align:center" hflex="1"/>
 
-            <hlayout spacing="10px">
-                <label value="Email:" width="100px"/>
-                <textbox width="200px" placeholder="Enter your email"/>
-            </hlayout>
+            <!-- Form Fields -->
+            <grid hflex="1">
+                <rows>
+                    <row>
+                        <label value="Email:"/>
+                        <textbox hflex="1"/>
+                    </row>
+                    <row>
+                        <label value="Password:"/>
+                        <textbox type="password" hflex="1"/>
+                    </row>
+                </rows>
+            </grid>
 
-            <hlayout spacing="10px">
-                <label value="Password:" width="100px"/>
-                <textbox type="password" width="200px" placeholder="Enter your password"/>
-            </hlayout>
-
-            <hlayout spacing="10px" style="margin-top:15px; justify-content:center">
-                <button label="Login" width="100px"/>
+            <!-- Buttons -->
+            <hlayout spacing="10px" hflex="1">
+                <div hflex="1"/>
+                <button label="Login" width="100px" onClick='Executions.sendRedirect("dashboard.zul")'/>
                 <button label="Cancel" width="100px"/>
+                <div hflex="1"/>
             </hlayout>
 
         </vlayout>
