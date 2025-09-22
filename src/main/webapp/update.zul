@@ -1,0 +1,55 @@
+<?page title="Update Data" contentType="text/html;charset=UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+
+    <borderlayout width="100%" height="100%">
+
+        <!-- Navigation Pane -->
+        <west title="Navigation Pane" size="200px" collapsible="true" splittable="true">
+            <vlayout spacing="10px" style="padding:15px">
+                <button label="Dashboard" width="100%" onClick='Executions.sendRedirect("dashboard.zul")'/>
+                <button label="Registration" width="100%" onClick='Executions.sendRedirect("registration.zul")'/>
+                <button label="List" width="100%" onClick='Executions.sendRedirect("list.zul")'/>
+                <button label="Update" width="100%" onClick='Executions.sendRedirect("update.zul")'/>
+            </vlayout>
+        </west>
+
+        <!-- Update form content -->
+        <center>
+            <vlayout hflex="1" vflex="1" style="padding:15px">
+                <label value="Update Data" style="font-size:18px;font-weight:bold" />
+
+                <grid width="60%">
+                    <rows>
+                        <row>
+                            <label value="Employee Name:"/>
+                            <textbox width="200px"/>
+                        </row>
+                        <row>
+                            <label value="Employee ID:"/>
+                            <textbox width="200px"/>
+                        </row>
+                        <row>
+                            <label value="Vehicle Type:"/>
+                            <combobox width="200px">
+                                <comboitem label="Car"/>
+                                <comboitem label="Motorcycle"/>
+                                <comboitem label="Truck"/>
+                            </combobox>
+                        </row>
+                        <row>
+                            <label value="License Number:"/>
+                            <textbox width="200px"/>
+                        </row>
+                    </rows>
+                </grid>
+
+                <hlayout spacing="10px" style="margin-top:10px">
+                    <button label="Save" style="font-weight:bold"/>
+                    <button label="Cancel" onClick='Executions.sendRedirect("list.zul")'/>
+                </hlayout>
+            </vlayout>
+        </center>
+
+    </borderlayout>
+
+</zk>

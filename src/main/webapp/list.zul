@@ -34,7 +34,7 @@
                         <listcell label="Car"/>
                         <listcell label="B1234XYZ"/>
                         <listcell>
-                            <button label="Edit"/>
+                            <button label="Edit" onClick='Executions.sendRedirect("update.zul")'/>
                             <button label="Delete"/>
                         </listcell>
                     </listitem>
