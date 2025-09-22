@@ -1,55 +1,60 @@
 <?page title="Registration Form" contentType="text/html;charset=UTF-8"?>
 <zk xmlns="http://www.zkoss.org/2005/zul">
 
-    <borderlayout width="100%" height="100%">
+    <window title="Registration Form" border="normal" width="100%" height="100%" sizable="true" maximizable="true" apply="latihan.EmployeeController">
+        <hlayout width="100%" height="100%">
 
-        <!-- Navigation Pane -->
-        <west title="Navigation Pane" size="200px" collapsible="true" splittable="true">
-            <vlayout spacing="10px" style="padding:15px">
-                <button label="Dashboard" width="100%" onClick='Executions.sendRedirect("dashboard.zul")'/>
-                <button label="Registration" width="100%" onClick='Executions.sendRedirect("registration.zul")'/>
-                <button label="List" width="100%" onClick='Executions.sendRedirect("list.zul")'/>
-                <button label="Update" width="100%" onClick='Executions.sendRedirect("update.zul")'/>
+            <!-- Navigation Pane -->
+            <vlayout width="200px" spacing="10px" style="padding:15px; background:#f9f9f9; border-right:1px solid #ccc;">
+                <button label="Dashboard" width="100%" mold="trendy" onClick='Executions.sendRedirect("dashboard.zul")'/>
+                <button label="Registration" width="100%" mold="trendy" onClick='Executions.sendRedirect("registration.zul")'/>
+                <button label="List" width="100%" mold="trendy" onClick='Executions.sendRedirect("list.zul")'/>
+                <button label="Update" width="100%" mold="trendy" onClick='Executions.sendRedirect("update.zul")'/>
             </vlayout>
-        </west>
 
-        <!-- Update form content -->
-        <center>
+            <!-- Registration form content -->
             <vlayout hflex="1" vflex="1" style="padding:15px">
-                <label value="Refistration Form" style="font-size:18px;font-weight:bold" />
+                <separator/>
+                <label value="📝 Registration Form" style="font-size:18px;font-weight:bold;text-align:center"/>
+                <separator bar="true"/>
 
-                <grid width="60%">
-                    <rows>
-                        <row>
-                            <label value="Employee Name:"/>
-                            <textbox width="200px"/>
-                        </row>
-                        <row>
-                            <label value="Employee ID:"/>
-                            <textbox width="200px"/>
-                        </row>
-                        <row>
-                            <label value="Vehicle Type:"/>
-                            <combobox width="200px">
-                                <comboitem label="Car"/>
-                                <comboitem label="Motorcycle"/>
-                                <comboitem label="Truck"/>
-                            </combobox>
-                        </row>
-                        <row>
-                            <label value="License Number:"/>
-                            <textbox width="200px"/>
-                        </row>
-                    </rows>
-                </grid>
+                <groupbox mold="3d" width="70%" closable="false">
+                    <caption label="Employee Details" style="font-weight:bold"/>
 
-                <hlayout spacing="10px" style="margin-top:10px">
-                    <button label="Save" style="font-weight:bold"/>
-                    <button label="Cancel" onClick='Executions.sendRedirect("list.zul")'/>
+                    <grid width="100%">
+                        <rows>
+                            <row>
+                                <label value="Employee Name:"/>
+                                <textbox id="employeeName" width="200px" placeholder="Enter full name"/>
+                            </row>
+                            <row>
+                                <label value="Employee ID:"/>
+                                <textbox id="employeeID" width="200px" placeholder="Ex: EMP001"/>
+                            </row>
+                            <row>
+                                <label value="Vehicle Type:"/>
+                                <combobox id="vehicleType" width="200px" placeholder="Choose type">
+                                    <comboitem label="Car"/>
+                                    <comboitem label="Motorcycle"/>
+                                    <comboitem label="Truck"/>
+                                </combobox>
+                            </row>
+                            <row>
+                                <label value="License Number:"/>
+                                <textbox id="licenseNumber" width="200px" placeholder="Ex: B 1234 XYZ"/>
+                            </row>
+                        </rows>
+                    </grid>
+                </groupbox>
+
+                <separator/>
+
+                <hlayout spacing="15px" style="margin-top:10px; text-align:center">
+                    <button id="btnSave" label="💾 Save" mold="trendy" width="120px"/>
+                    <button label="❌ Cancel" mold="trendy" width="120px" onClick='Executions.sendRedirect("list.zul")'/>
                 </hlayout>
             </vlayout>
-        </center>
 
-    </borderlayout>
-
+        </hlayout>
+    </window>
 </zk>
