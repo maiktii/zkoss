@@ -34,12 +34,9 @@ public class EmployeeController extends SelectorComposer<Component> {
         String vehicle = vehicleType.getValue();
         String license = licenseNumber.getValue();
 
-        System.out.println("ID:::" + id + "NAME::" + name + "TYPE::"+ vehicle+ "LICENSE::"+license);
-
         EmployeeModel newEmployee = new EmployeeModel(id, name, vehicle, license);
         es.createData(newEmployee);
 
-        System.out.println("DATA EMPLOYEE NEW: " + newEmployee);
 
         Executions.sendRedirect("list.zul");
     }

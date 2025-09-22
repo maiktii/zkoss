@@ -17,7 +17,6 @@ public class ListController extends SelectorComposer<Component> {
     @Override
     public void doAfterCompose(Component comp) throws Exception {
         super.doAfterCompose(comp);
-        System.out.println("DEBUG: ListController initialized");
         loadData();
     }
 
