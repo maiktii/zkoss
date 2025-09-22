@@ -1,0 +1,126 @@
+<?page title="Dashboard" contentType="text/html;charset=UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <style>
+        .dashboard-container {
+        padding: 20px;
+        background: #f9fafc;
+        height: 100%;
+        }
+        .dashboard-panel {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        padding: 15px;
+        }
+        .dashboard-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        text-align: center;
+        font-weight: bold;
+        padding: 20px;
+        font-size: 16px;
+        }
+        .dashboard-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+        }
+        .stat-number {
+        font-size: 28px;
+        font-weight: bold;
+        color: #007bff;
+        }
+        .stat-label {
+        font-size: 13px;
+        color: #666;
+        }
+    </style>
+
+    <vlayout sclass="dashboard-container" spacing="20px">
+
+        <!-- Top wide panel -->
+        <div sclass="dashboard-panel" height="150px" width="100%">
+            <label value="Parking System Overview" sclass="dashboard-title"/>
+            <hlayout spacing="30px">
+                <vlayout>
+                    <label value="85" sclass="stat-number"/>
+                    <label value="Registered Employees" sclass="stat-label"/>
+                </vlayout>
+                <vlayout>
+                    <label value="40" sclass="stat-number"/>
+                    <label value="Cars Registered" sclass="stat-label"/>
+                </vlayout>
+                <vlayout>
+                    <label value="45" sclass="stat-number"/>
+                    <label value="Motorcycles Registered" sclass="stat-label"/>
+                </vlayout>
+            </hlayout>
+        </div>
+
+        <!-- Middle row with 4 cards -->
+        <hlayout spacing="20px" width="100%">
+            <div sclass="dashboard-card" width="25%" height="120px">
+                <label value="200" sclass="stat-number"/>
+                <label value="Total Parking Slots" sclass="stat-label"/>
+            </div>
+            <div sclass="dashboard-card" width="25%" height="120px">
+                <label value="125" sclass="stat-number"/>
+                <label value="Occupied Slots" sclass="stat-label"/>
+            </div>
+            <div sclass="dashboard-card" width="25%" height="120px">
+                <label value="8" sclass="stat-number"/>
+                <label value="Today’s Registrations" sclass="stat-label"/>
+            </div>
+            <div sclass="dashboard-card" width="25%" height="120px">
+                <label value="2" sclass="stat-number"/>
+                <label value="Parking Alerts" sclass="stat-label"/>
+            </div>
+        </hlayout>
+
+        <!-- Bottom wide panel -->
+        <div sclass="dashboard-panel" height="250px" width="100%">
+            <label value="Recent Employee Registrations" sclass="dashboard-title"/>
+            <listbox mold="paging" pageSize="5" width="100%">
+                <listhead>
+                    <listheader label="Employee ID"/>
+                    <listheader label="Employee Name"/>
+                    <listheader label="Vehicle Type"/>
+                    <listheader label="License Plate"/>
+                </listhead>
+                <listitem>
+                    <listcell label="EMP001"/>
+                    <listcell label="John Doe"/>
+                    <listcell label="Car"/>
+                    <listcell label="B 1234 XYZ"/>
+                </listitem>
+                <listitem>
+                    <listcell label="EMP002"/>
+                    <listcell label="Jane Smith"/>
+                    <listcell label="Motorcycle"/>
+                    <listcell label="B 5678 ABC"/>
+                </listitem>
+                <listitem>
+                    <listcell label="EMP003"/>
+                    <listcell label="Michael Lee"/>
+                    <listcell label="Car"/>
+                    <listcell label="B 8765 DEF"/>
+                </listitem>
+                <listitem>
+                    <listcell label="EMP004"/>
+                    <listcell label="Alice Wong"/>
+                    <listcell label="Motorcycle"/>
+                    <listcell label="B 4321 GHI"/>
+                </listitem>
+                <listitem>
+                    <listcell label="EMP005"/>
+                    <listcell label="David Kim"/>
+                    <listcell label="Car"/>
+                    <listcell label="B 9988 JKL"/>
+                </listitem>
+            </listbox>
+        </div>
+
+    </vlayout>
+</zk>

@@ -1,0 +1,29 @@
+<?page title="Login Page" contentType="text/html;charset=UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+
+    <window title="Login" border="normal" width="350px" closable="false"
+            minimizable="false" maximizable="false" sclass="login-window">
+
+        <vlayout spacing="15px" style="padding:20px">
+
+            <label value="🔑 Please Login" style="font-size:16px; font-weight:bold; text-align:center"/>
+
+            <hlayout spacing="10px">
+                <label value="Email:" width="100px"/>
+                <textbox width="200px" placeholder="Enter your email"/>
+            </hlayout>
+
+            <hlayout spacing="10px">
+                <label value="Password:" width="100px"/>
+                <textbox type="password" width="200px" placeholder="Enter your password"/>
+            </hlayout>
+
+            <hlayout spacing="10px" style="margin-top:15px; justify-content:center">
+                <button label="Login" width="100px"/>
+                <button label="Cancel" width="100px"/>
+            </hlayout>
+
+        </vlayout>
+    </window>
+
+</zk>
