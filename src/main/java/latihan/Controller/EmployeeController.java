@@ -1,14 +1,13 @@
-package latihan;
+package latihan.Controller;
 
-import org.w3c.dom.Text;
+import latihan.Model.EmployeeModel;
+import latihan.Service.EmployeeService;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Combobox;
-import org.zkoss.zul.Label;
-import org.zkoss.zul.Messagebox;
 import org.zkoss.zul.Textbox;
 
 public class EmployeeController extends SelectorComposer<Component> {

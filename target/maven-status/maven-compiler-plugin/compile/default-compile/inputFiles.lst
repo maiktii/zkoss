@@ -1,5 +1,7 @@
-C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\EmployeeController.java
-C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\EmployeeService.java
-C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\EmployeeModel.java
-C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\ListController.java
+C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\Controller\EmployeeController.java
 C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\MyViewModel.java
+C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\Model\EmployeeModel.java
+C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\Controller\ListController.java
+C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\Controller\DashboardController.java
+C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\Model\LotModel.java
+C:\Users\72528\Documents\zkoss\latihan\src\main\java\latihan\Service\EmployeeService.java

@@ -1,4 +1,6 @@
-package latihan;
+package latihan.Service;
+
+import latihan.Model.EmployeeModel;
 
 import java.util.ArrayList;
 import java.util.List;

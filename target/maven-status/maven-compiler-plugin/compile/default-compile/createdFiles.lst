@@ -1,6 +1,7 @@
+latihan\Controller\EmployeeController.class
+latihan\Controller\ListController.class
+latihan\Model\EmployeeModel.class
+latihan\Controller\DashboardController.class
 latihan\MyViewModel.class
-latihan\EmployeeService.class
-latihan\ListController.class
-latihan\EmployeeController.class
-latihan\DashboardController.class
-latihan\EmployeeModel.class
+latihan\Model\LotModel.class
+latihan\Service\EmployeeService.class

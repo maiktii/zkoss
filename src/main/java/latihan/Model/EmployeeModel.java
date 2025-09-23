@@ -1,4 +1,4 @@
-package latihan;
+package latihan.Model;
 
 public class EmployeeModel {
     private String employeeName;
